@@ -115,6 +115,7 @@
     .hero-trust { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 30px; color: #c7bbaa; font-size: .71rem; }
     .hero-trust span, .trust-items span, .final-notes span { display: inline-flex; align-items: center; gap: 7px; }
     .hero-trust svg, .trust-items svg, .final-notes svg { color: var(--amber); }
+    .cta-note { margin: -15px 0 0; color: #bcae9e; font-size: .68rem; line-height: 1.45; }
     .hero-product { position: relative; justify-self: end; width: min(100%, 480px); min-height: 560px; }
     .chapter-tag { position: absolute; z-index: 2; top: 26px; left: -16px; padding: 8px 12px; color: var(--espresso); background: var(--amber); font-size: .61rem; font-weight: 800; letter-spacing: .13em; }
     .chapter-tag span { padding: 0 5px; opacity: .45; }
@@ -369,6 +370,58 @@
       .mobile-cta:hover .mobile-cta-button { background: #c8962f; box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 5px 12px rgba(213,164,71,.32); transform: translateY(-1px); }
       .mobile-cta-button span[aria-hidden="true"] { display: inline-block; transition: transform .16s var(--ease); }
       .mobile-cta:hover .mobile-cta-button span[aria-hidden="true"] { transform: translate(3px, -3px); }
+      .frame { width: min(100% - 32px, 560px); }
+      .section { padding: 54px 0; }
+      .urgency { padding-top: env(safe-area-inset-top); }
+      .urgency .frame { min-height: 32px; line-height: 1.2; }
+      .header-inner { min-height: 62px; }
+      .nav { top: 62px; padding-inline: 16px; }
+      .hero-grid { gap: 14px; padding: 42px 0 25px; }
+      .hero-copy h1 { font-size: clamp(2.5rem, 12.5vw, 3.65rem); line-height: .94; }
+      .hero-lead { margin-bottom: 22px; font-size: .94rem; }
+      .hero-actions { gap: 13px; }
+      .hero-actions .button { min-height: 56px; font-size: .74rem; }
+      .hero-actions .text-link { min-height: 38px; }
+      .cta-note { margin: -3px 0 0; text-align: center; }
+      .hero-trust { justify-content: center; margin-top: 18px; line-height: 1.35; }
+      .hero-product { width: min(100%, 310px); min-height: 315px; }
+      .hero-image-wrap { height: 295px; }
+      .hero-image-wrap img { width: 92%; }
+      .hero-price { right: -2px; bottom: -2px; min-width: 146px; padding: 11px 12px 10px; }
+      .hero-price strong { font-size: 1.8rem; }
+      .hero-price a { font-size: .62rem; }
+      .hero-quote { padding-bottom: 16px; font-size: .86rem; text-align: center; }
+      .trust-strip .frame { padding: 18px 0; }
+      .trust-strip p { font-size: .78rem; }
+      .sales-bar-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sales-bar-lead strong { font-size: 1.38rem; }
+      .sales-fact { padding-left: 8px; }
+      .sales-fact strong { font-size: 1.28rem; }
+      .sales-fact span { font-size: .54rem; line-height: 1.15; }
+      .intro-content h2, .study-content h2, .offer-heading h2 { font-size: clamp(2.45rem, 12vw, 3.55rem); }
+      .large-copy { line-height: 1.65; }
+      .feature-card h3 { font-size: 1.42rem; }
+      .study-image { width: 100%; }
+      .image-caption { right: -5px; bottom: 15px; max-width: 150px; font-size: .72rem; }
+      .bonus-card { grid-template-columns: 96px 1fr; }
+      .bonus-body { padding: 17px 14px; }
+      .bonus-body h3 { font-size: 1.25rem; }
+      .plan { padding: 22px 16px 19px; }
+      .plan h3 { font-size: 1.82rem; }
+      .plan-price strong { font-size: 2.65rem; }
+      .plan-list { gap: 10px; font-size: .88rem; }
+      .guarantee-grid h2 { font-size: clamp(2.45rem, 12vw, 3.25rem); }
+      .faq-intro h2 { font-size: clamp(2.45rem, 12vw, 3.3rem); }
+      .faq-question { min-height: 58px; padding: 15px 0; font-size: 1rem; }
+      .faq-answer p { font-size: .88rem; line-height: 1.6; }
+      .legal-card { padding: 19px 16px; }
+      .legal-card h3 { font-size: 1.38rem; }
+      .legal-card p { font-size: .78rem; line-height: 1.58; overflow-wrap: anywhere; }
+      .final-content { padding: 70px 0 98px; }
+      .final-content h2 { font-size: clamp(2.5rem, 12vw, 3.45rem); }
+      .mobile-cta { right: 8px; bottom: max(8px, env(safe-area-inset-bottom)); left: 8px; gap: 8px; min-height: 64px; padding-left: 11px; }
+      .mobile-cta-info strong { font-size: .74rem; }
+      .mobile-cta-button { min-height: 46px; padding: 0 11px; font-size: .64rem; }
     }
 
     @media (prefers-reduced-motion: no-preference) {
@@ -417,16 +470,17 @@
       <div class="frame hero-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow light">DEVOCIONAL DO DIA • 365 LEITURAS</p>
-          <h1>Devocional do dia: Deus sente falta de ouvir<em> sua Voz.</em></h1>
-          <p class="hero-lead">Um devocional completo para começar o dia com Deus em reflexão e direção para o seu dia a dia.</p>
+          <h1>365 dias para transformar sua busca por Deus em uma prática<em> possível.</em></h1>
+          <p class="hero-lead">Leituras guiadas para você saber por onde começar, refletir com calma e voltar no dia seguinte — mesmo quando a rotina estiver corrida.</p>
           <div class="hero-actions">
-            <a class="button button-primary" data-checkout href="#oferta">Quero meu momento com Deus <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" data-checkout data-cta-position="hero" href="#oferta">Começar por R$ 37 <span aria-hidden="true">↗</span></a>
             <a class="text-link light-link" href="#metodo">Ver como funciona <span aria-hidden="true">↓</span></a>
           </div>
+          <p class="cta-note">Pagamento único. As condições completas aparecem antes da confirmação.</p>
           <div class="hero-trust" aria-label="Elementos de segurança">
             <span>♢ Uma leitura por dia</span>
             <span>ϟ Acesso imediato</span>
-            <span>▣ Um ano de acesso</span>
+            <span>▣ Acesso vitalício</span>
           </div>
         </div>
 
@@ -454,11 +508,11 @@
 
     <section class="sales-bar" aria-label="Resumo da oferta">
       <div class="frame sales-bar-grid">
-        <div class="sales-bar-lead"><span class="sales-kicker">DEVOCIONAL 365 DIAS</span><strong>O caminho já está organizado.</strong></div>
+        <div class="sales-bar-lead"><span class="sales-kicker">DEVOCIONAL 365 DIAS</span><strong>Seu próximo passo já está organizado.</strong></div>
         <div class="sales-fact"><strong>365</strong><span>leituras</span></div>
         <div class="sales-fact"><strong>1</strong><span>produto</span></div>
         <div class="sales-fact"><strong>R$ 37</strong><span>pagamento único</span></div>
-        <a class="button button-primary" data-checkout href="#oferta">Quero meu momento com Deus <span aria-hidden="true">↗</span></a>
+        <a class="button button-primary" data-checkout data-cta-position="summary" href="#oferta">Ver a oferta completa <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -510,8 +564,8 @@
       <div class="frame">
         <div class="center-heading">
           <p class="eyebrow">O QUE ACOMPANHA O SEU ANO</p>
-          <h2>Mais apoio para continuar quando a motivação baixar.</h2>
-          <p>Além das 365 leituras, você recebe materiais complementares para retomar a rotina, aprofundar a reflexão e não deixar um dia difícil encerrar o seu caminho.</p>
+          <h2>Você recebe um caminho completo para continuar.</h2>
+          <p>Além das 365 leituras, você recebe materiais complementares para aprofundar a reflexão e encontrar um ponto de partida quando não souber por onde seguir.</p>
         </div>
         <div class="bonus-grid">
           <article class="bonus-card"><div class="bonus-cover"><span>40</span><small>BÔNUS</small><strong>Dias de busca pelo Senhor</strong><i>estudo & prática</i></div><div class="bonus-body"><p class="bonus-number">BÔNUS 01</p><h3>Devocional de 365 dias</h3><p>Uma sequência de leituras para criar constância.</p></div></article>
@@ -529,8 +583,8 @@
       <div class="frame">
         <div class="offer-heading">
           <p class="eyebrow light">UMA DECISÃO SIMPLES PARA COMEÇAR HOJE</p>
-          <h2>Um ano inteiro de leituras para você não precisar <em>adiar de novo.</em></h2>
-          <p>Você não precisa comparar vários produtos. Existe um único caminho: uma leitura para cada dia, acesso vitalício e liberdade para seguir no seu ritmo.</p>
+          <h2>Comece hoje com um caminho pronto para os próximos <em>365 dias.</em></h2>
+          <p>Você recebe um único produto digital, com pagamento único, acesso vitalício e liberdade para seguir no seu ritmo. Veja os detalhes e confirme a compra somente depois de conferir as condições no checkout.</p>
         </div>
         <div class="plans single-plan">
           <article class="plan plan-complete">
@@ -538,10 +592,10 @@
             <p class="plan-label">Devocional 365 Dias</p>
             <h3>Um lugar para começar e voltar</h3>
             <p>Para quem quer transformar o desejo de uma vida espiritual mais presente em uma prática diária possível, sem depender de uma rotina perfeita.</p>
-            <div class="plan-price"><strong>R$ 37<span>,00</span></strong><small>acesso vitalício • pagamento único</small></div>
+            <div class="plan-price"><strong>R$ 37<span>,00</span></strong><small>acesso vitalício • pagamento único • sem assinatura</small></div>
             <ul class="plan-list"><li>✓ 365 leituras devocionais guiadas</li><li>✓ Uma sequência pronta para cada dia do ano</li><li>✓ Reflexões para leitura, oração e continuidade</li><li>✓ Acesso vitalício pelo celular ou computador</li><li>✓ 7 dias de garantia para conhecer o material</li></ul>
-            <a class="button button-primary button-full" data-checkout href="#oferta">Quero começar pela leitura de hoje <span aria-hidden="true">↗</span></a>
-            <div class="plan-safe">⌑ Compra protegida no checkout</div>
+            <a class="button button-primary button-full" data-checkout data-cta-position="offer" href="#oferta">Quero começar agora — R$ 37 <span aria-hidden="true">↗</span></a>
+            <div class="plan-safe">⌑ Checkout seguro • pagamento único • garantia de 7 dias</div>
           </article>
         </div>
       </div>
@@ -551,7 +605,7 @@
       <div class="frame guarantee-grid">
         <div class="seal" aria-label="Garantia de 7 dias"><span aria-hidden="true">♢</span><strong>7</strong><small>DIAS</small></div>
         <div><p class="eyebrow">VOCÊ NÃO PRECISA DECIDIR NO ESCURO</p><h2>Conheça primeiro. Decida com tranquilidade.</h2><p>Seu acesso está protegido por uma garantia de 7 dias. Veja como o material funciona, confira se ele cabe na sua rotina e consulte as condições de reembolso no checkout.</p></div>
-        <a class="text-link" data-checkout href="#oferta">Ver condições da oferta <span aria-hidden="true">↗</span></a>
+        <a class="text-link" data-checkout data-cta-position="guarantee" href="#oferta">Conferir a oferta completa <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -563,7 +617,7 @@
           <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Preciso ler exatamente todos os dias?</span><span aria-hidden="true">⌄</span></button><div class="faq-answer"><p>Não. A sequência existe para orientar, não para criar culpa. Se você perder um dia, pode retomar de onde parou e seguir no seu ritmo.</p></div></div>
           <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Quanto tempo preciso reservar?</span><span aria-hidden="true">⌄</span></button><div class="faq-answer"><p>A proposta é começar com alguns minutos de leitura e reflexão. Você pode aprofundar quando tiver mais tempo, sem transformar o devocional em mais uma tarefa impossível.</p></div></div>
           <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Como recebo o acesso?</span><span aria-hidden="true">⌄</span></button><div class="faq-answer"><p>Após a confirmação do pagamento, o acesso é enviado para o e-mail e para o WhatsApp cadastrados no checkout. Confira também a caixa de spam e as abas promocionais.</p></div></div>
-          <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>E se eu perder alguns dias?</span><span aria-hidden="true">⌄</span></button><div class="faq-answer"><p>Você não precisa começar tudo de novo. Retome o próximo dia disponível e use o acesso vitalício para revisitar o que ficou para trás.</p></div></div>
+          <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>E se eu perder alguns dias?</span><span aria-hidden="true">⌄</span></button><div class="faq-answer"><p>Você não precisa começar tudo de novo. Retome o próximo dia disponível e use o acesso vitalício para revisitar o que ficou para trás.</p></div></div><div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>É assinatura ou pagamento recorrente?</span><span aria-hidden="true">⌄</span></button><div class="faq-answer"><p>Não. A oferta apresentada nesta página é de pagamento único. Confira o valor e as condições exibidas no checkout antes de confirmar.</p></div></div>
         </div>
       </div>
     </section>
@@ -571,8 +625,8 @@
     <section class="final-cta">
       <div class="frame final-content">
         <p class="eyebrow light">O PRIMEIRO DIA PODE SER HOJE</p>
-        <h2>Você não precisa fazer tudo. Só precisa abrir o primeiro dia.</h2>
-        <p>Reserve alguns minutos, leia a reflexão de hoje e deixe que o próximo passo seja pequeno o bastante para acontecer.</p>
+        <h2>Seu primeiro dia pode começar agora.</h2>
+        <p>Escolha um ponto de partida, confira as condições da oferta e abra a primeira leitura no seu ritmo.</p>
         <a class="button button-primary" data-checkout href="#oferta">Quero abrir o primeiro dia <span aria-hidden="true">↗</span></a>
         <div class="final-notes"><span>♢ Garantia de 7 dias</span><span>⌑ Pagamento seguro</span><span>ϟ Acesso imediato</span></div>
       </div>
